@@ -687,9 +687,9 @@
     #define DEFAULT_KI_LIST {   1.54,   1.54 }
     #define DEFAULT_KD_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_KP  21.73
-    #define DEFAULT_KI   1.54
-    #define DEFAULT_KD  76.55
+    #define DEFAULT_KP  23.81
+    #define DEFAULT_KI   1.93
+    #define DEFAULT_KD 73.64
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1196,7 +1196,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95.56 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
