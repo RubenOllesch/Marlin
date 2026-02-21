@@ -768,16 +768,16 @@
  *
  * With this option disabled, bang-bang will be used. BED_LIMIT_SWITCHING enables hysteresis.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Creality Ender-3 Pro
-  #define DEFAULT_BED_KP 50.71
-  #define DEFAULT_BED_KI 9.88
-  #define DEFAULT_BED_KD 173.43
+  #define DEFAULT_BED_KP 145.28
+  #define DEFAULT_BED_KI 23.28
+  #define DEFAULT_BED_KD 604.36
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
