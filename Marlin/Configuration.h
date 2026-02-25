@@ -2067,7 +2067,12 @@
 #define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB { 25, 25, 25, 25 } // (mm) Left, Front, Right, Back insets
+  #define SCREW_DISTANCE_X 170    // Distance between left and right screw holes of bed
+  #define SCREW_DISTANCE_Y 170    // Distance between front and back screw holes of bed
+  #define BED_EDGE_SCREW_INSET_X  (((X_BED_SIZE)-(SCREW_DISTANCE_X)) / 2.0f)
+  #define BED_EDGE_SCREW_INSET_Y  (((Y_BED_SIZE)-(SCREW_DISTANCE_Y)) / 2.0f)
+  #define BED_TRAMMING_INSET_LFRB { BED_EDGE_SCREW_INSET_X, BED_EDGE_SCREW_INSET_Y, BED_EDGE_SCREW_INSET_X, BED_EDGE_SCREW_INSET_Y } // (mm) Left, Front, Right, Back insets
+
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at tramming points
   #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z raise between tramming points
   //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
