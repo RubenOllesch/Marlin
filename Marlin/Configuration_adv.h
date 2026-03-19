@@ -1401,7 +1401,7 @@
   #if HAS_BED_PROBE
 
     // Show Deploy / Stow Probe options in the Motion menu.
-    #define PROBE_DEPLOY_STOW_MENU
+    //#define PROBE_DEPLOY_STOW_MENU
 
     // Add calibration in the Probe Offsets menu to compensate for X-axis twist.
     //#define X_AXIS_TWIST_COMPENSATION
