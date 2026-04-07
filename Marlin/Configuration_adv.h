@@ -1033,11 +1033,11 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define from 3 to 9 points to probe.
-  #define TRAMMING_POINT_XY {                                                         \
-    { (BED_EDGE_SCREW_INSET_X),             (BED_EDGE_SCREW_INSET_Y)             },   \
-    { (X_MAX_BED - BED_EDGE_SCREW_INSET_X), (BED_EDGE_SCREW_INSET_Y)             },   \
-    { (X_MAX_BED - BED_EDGE_SCREW_INSET_X), (Y_MAX_BED - BED_EDGE_SCREW_INSET_Y) },   \
-    { (BED_EDGE_SCREW_INSET_X),             (Y_MAX_BED - BED_EDGE_SCREW_INSET_Y) }    \
+  #define TRAMMING_POINT_XY {                                                                   \
+    { (BED_EDGE_SCREW_INSET_X),                 (BED_EDGE_SCREW_INSET_Y)                  },    \
+    { ((X_MAX_BED) - (BED_EDGE_SCREW_INSET_X)), (BED_EDGE_SCREW_INSET_Y)                  },    \
+    { ((X_MAX_BED) - (BED_EDGE_SCREW_INSET_X)), ((Y_MAX_BED) - (BED_EDGE_SCREW_INSET_Y))  },    \
+    { (BED_EDGE_SCREW_INSET_X),                 ((Y_MAX_BED) - (BED_EDGE_SCREW_INSET_Y))  }     \
   }
 
   // Define position names for probe points.
@@ -1392,7 +1392,7 @@
     #define PROBE_OFFSET_WIZARD_START_Z -2.0
 
     // Set a convenient position to do the calibration (probing point and nozzle/bed-distance)
-    #define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }
+    #define PROBE_OFFSET_WIZARD_XY_POS { (BED_EDGE_SCREW_INSET_X), (BED_EDGE_SCREW_INSET_Y) }
   #endif
 #endif
 
