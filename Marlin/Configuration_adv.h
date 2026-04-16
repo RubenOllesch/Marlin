@@ -1033,11 +1033,13 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define from 3 to 9 points to probe.
-  #define TRAMMING_POINT_XY {                                                                   \
-    { (BED_EDGE_SCREW_INSET_X),                 (BED_EDGE_SCREW_INSET_Y)                  },    \
-    { ((X_MAX_BED) - (BED_EDGE_SCREW_INSET_X)), (BED_EDGE_SCREW_INSET_Y)                  },    \
-    { ((X_MAX_BED) - (BED_EDGE_SCREW_INSET_X)), ((Y_MAX_BED) - (BED_EDGE_SCREW_INSET_Y))  },    \
-    { (BED_EDGE_SCREW_INSET_X),                 ((Y_MAX_BED) - (BED_EDGE_SCREW_INSET_Y))  }     \
+  #define TRAMMING_INSET (BED_EDGE_SCREW_INSET_X) // Inset from bed corners
+
+  #define TRAMMING_POINT_XY {                                                   \
+    { (TRAMMING_INSET),                 (TRAMMING_INSET)                  },    \
+    { ((X_MAX_BED) - (TRAMMING_INSET)), (TRAMMING_INSET)                  },    \
+    { ((X_MAX_BED) - (TRAMMING_INSET)), ((Y_MAX_BED)  - (TRAMMING_INSET)) },    \
+    { (TRAMMING_INSET),                 ((Y_MAX_BED)  - (TRAMMING_INSET)) }     \
   }
 
   // Define position names for probe points.
