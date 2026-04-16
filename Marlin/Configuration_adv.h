@@ -1033,7 +1033,7 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define from 3 to 9 points to probe.
-  #define TRAMMING_INSET (BED_EDGE_SCREW_INSET_X) // Inset from bed corners
+  #define TRAMMING_INSET (20 + (BED_EDGE_SCREW_INSET_X)) // Inset from bed corners
 
   #define TRAMMING_POINT_XY {                                                   \
     { (TRAMMING_INSET),                 (TRAMMING_INSET)                  },    \
